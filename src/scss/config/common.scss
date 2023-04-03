@@ -1,1 +1,287 @@
 // Заголовки, общие БЄМ блоки и проче...
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap");
+
+.hero {
+  &__banner {
+    display: flex;
+
+    @media(max-width:992px) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__welcome {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    @media(max-width:992px) {
+      width: 100%;
+      padding: 126px 20px;
+    }
+
+    @media(max-width:600px) {
+      min-height: 80vh;
+    }
+  }
+
+  &__welcome-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
+  &__welcome-wrapper {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 1;
+  }
+
+  &__welcome-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 98.02%;
+    color: #FFFFFF;
+    margin: 0;
+
+    @media(max-width:992px) {
+      text-align: center;
+      font-size: 28px;
+      max-width: 335px;
+      margin: 0 auto;
+    }
+  }
+
+  &__welcome-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    margin: 0;
+
+    @media(max-width:992px) {
+      text-align: center;
+      max-width: 335px;
+      margin: 0 auto;
+      font-size: 14px;
+    }
+  }
+
+  &__welcome-btns {
+    display: flex;
+    gap: 20px;
+
+    @media(max-width:992px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__welcome-btn {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 50px;
+    padding: 16px 20px;
+    border: 1px solid #FF8B13;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0;
+
+    &:hover {
+      background: #d4791b !important;
+      color: #FFFFFF;
+    }
+
+    &.activebtn {
+      background: #FF8B13;
+      color: #000000;
+
+      &:hover {
+        background: #d4791b !important;
+        color: #000000;
+      }
+    }
+
+    @media(max-width:992px) {}
+  }
+
+  &__offer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: url(https://jpstrafikskola.se/wp-content/uploads/2023/02/price.svg);
+    background-size: cover;
+    background-position: center;
+
+    @media(max-width:992px) {
+      width: 100%;
+      padding: 40px 20px;
+    }
+  }
+
+  &__offer-image {
+    max-width: 370px;
+    margin-bottom: 20px;
+
+    @media(max-width:992px) {}
+  }
+
+  &__offer-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    max-width: 640px;
+    margin-bottom: 40px;
+
+    @media(max-width:992px) {}
+  }
+
+  &__offer-box {
+    width: calc(50% - 11px);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.5s all;
+
+    &:hover {
+      box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    &.yellow {
+      background: #F7C04A;
+    }
+
+    &.blue {
+      background: #00235B;
+    }
+
+    &.green {
+      background: #539165;
+    }
+
+    &.gray {
+      background: #F8F5E4;
+    }
+
+    @media(max-width:650px) {
+      width: 100%;
+    }
+  }
+
+  &__offer-title {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0.005em;
+    color: #000000;
+
+    .blue & {
+      color: #FFFFFF;
+    }
+
+    .green & {
+      color: #FFFFFF;
+    }
+  }
+
+  &__offer-list {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  &__offer-item {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+
+    .blue & {
+      color: #FFFFFF;
+    }
+
+    .green & {
+      color: #FFFFFF;
+    }
+  }
+
+  &__offer-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__offer-price {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 27px;
+    color: #B20000;
+  }
+
+  &__offer-desc {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+
+    .blue & {
+      color: #FFFFFF;
+    }
+
+    .green & {
+      color: #FFFFFF;
+    }
+  }
+
+  &__offer-all {
+    display: flex;
+    text-align: center;
+    margin: 20px auto 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-decoration: underline;
+
+    &:hover {
+      color: #FF8B13;
+    }
+  }
+}
